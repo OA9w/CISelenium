@@ -5,6 +5,7 @@ import hesias.selenium.practices.pages.SearchResultsPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
