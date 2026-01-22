@@ -1,6 +1,8 @@
 package hesias.selenium.practices.tests;
 
 import hesias.selenium.practices.pages.HomePage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -8,6 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class HomeTest extends BaseTest {
 
     @Test
+    @Feature("Home action")
+    @Description("Test de l'affichage de la page d'accueil")
     public void testHomePageIsDisplayed() {
         HomePage homePage = new HomePage(driver);
 
@@ -18,6 +22,8 @@ public class HomeTest extends BaseTest {
     }
 
     @Test
+    @Feature("Home action")
+    @Description("Test de l'utilisation du slider de la page d'accueil vers la gauche")
     public void testSliderLeft() {
         HomePage homePage = new HomePage(driver);
         homePage.open();
@@ -27,6 +33,8 @@ public class HomeTest extends BaseTest {
     }
 
     @Test
+    @Feature("Home action")
+    @Description("Test de qqch je sais plus")
     public void testGoToGamePage() {
         HomePage homePage = new HomePage(driver);
         homePage.open();

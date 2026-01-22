@@ -2,6 +2,8 @@ package hesias.selenium.practices.tests;
 
 import hesias.selenium.practices.pages.HomePage;
 import hesias.selenium.practices.pages.SearchResultsPage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -9,6 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class SearchTest extends BaseTest{
 
     @Test
+    @Feature("Search action")
+    @Description("Test de la recherche de Cyberpunk")
     public void testSearchCyberpunk() {
         HomePage homePage =new HomePage(driver);
         homePage.open();
@@ -22,6 +26,8 @@ public class SearchTest extends BaseTest{
     }
 
     @Test
+    @Feature("Search action")
+    @Description("Test de la recherche de Binding of")
     public void testSearchBindingOf() {
         HomePage homePage =new HomePage(driver);
         homePage.open();
@@ -36,6 +42,8 @@ public class SearchTest extends BaseTest{
     }
 
     @Test
+    @Feature("Search action")
+    @Description("Test de la recherche de Witcher et vérif que le premier résultat contient Witcher")
     public void testFirstResultContainsWitcher() {
         HomePage homePage =new HomePage(driver);
         homePage.open();
@@ -50,6 +58,8 @@ public class SearchTest extends BaseTest{
     }
 
     @Test
+    @Feature("Search action")
+    @Description("Test de la recherche de Cyberpunk et de l'application du filtre GOG")
     public void testFilterGoodOldGames() {
         HomePage homePage =new HomePage(driver);
         homePage.open();
@@ -61,6 +71,8 @@ public class SearchTest extends BaseTest{
     }
 
     @Test
+    @Feature("Search action")
+    @Description("Test de la suppression des filtres")
     public void testRemoveFilter() {
         HomePage homePage =new HomePage(driver);
         homePage.open();

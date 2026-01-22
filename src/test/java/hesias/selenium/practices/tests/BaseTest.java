@@ -1,8 +1,11 @@
 package hesias.selenium.practices.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -32,6 +35,11 @@ abstract public class BaseTest {
         }
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
+    }
+
+    @Attachment(value = "Screenshot for the test", type = "image/png", fileExtension = ".png")
+    public byte[] saveScreenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
     @AfterEach
