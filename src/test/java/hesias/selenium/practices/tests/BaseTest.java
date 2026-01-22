@@ -16,16 +16,10 @@ abstract public class BaseTest {
     protected WebDriver driver;
 
     @BeforeEach
-    public void setDriver() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-    @BeforeEach
     protected void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        boolean isCi = "true".equalsIgnoreCase(System.getenv("CI"));
         String headless = System.getenv("HEADLESS");
         if ("true".equalsIgnoreCase(headless)) {
             options.addArguments("--headless=new");

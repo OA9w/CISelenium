@@ -4,6 +4,7 @@ import hesias.selenium.practices.pages.HomePage;
 import hesias.selenium.practices.pages.SearchResultsPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
@@ -13,6 +14,7 @@ public class SearchTest extends BaseTest{
 
     @Test
     @Feature("Search action")
+    @Story("As a user, searching for Cyberpunk")
     @Description("Test de la recherche de Cyberpunk")
     public void testSearchCyberpunk() {
         HomePage homePage =new HomePage(driver);
